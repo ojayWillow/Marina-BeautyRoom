@@ -1,29 +1,33 @@
-# 🌸 Terezas Waxing & Body Studio
+# 🌸 Marina BeautyRoom — Vaksācija Zolītūde / Imanta
 
-> *Your path to smooth skin starts here.*
+> *Professional waxing & hair removal in Riga*
 
-Official website for **Terezas Waxing & Body Studio** — a professional waxing & hair removal studio located in the heart of Riga.
+Official website for **Vaksācija Zolītūde/Imanta — Marina.BeautyRoom**
 
 ## 📍 Location
-**Dzirnavu iela 31**, Centra rajons, Rīga, LV-1010, Latvia
+**Ruses iela 6-1**, Zemgales priekšpilseta, Rīga, LV-1029, Latvia
 
 ## 📞 Contact
-- Phone: +371 28 242 390
-- Email: labsajutai@gmail.com
-- Instagram: [@terezaswaxing](https://www.instagram.com/terezaswaxing/)
-- Facebook: [terezaswaxing](https://www.facebook.com/terezaswaxing/)
+- Phone: [+371 29 818 158](tel:+37129818158)
 - Google Maps: [View on Maps](https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7)
 
+## ⭐ Rating
+5.0 / 5.0 — 28 Google Reviews
+
+## 🕐 Hours
+Open 24 hours, 7 days a week
+
+## 👩‍💼
+Women-owned business
+
 ## Features
-- Full brand identity page for Terezas Waxing & Body Studio
-- Services for Women, Men & Pregnant clients
-- Lymphatic drainage & body treatments
-- Appointment booking / registration form with validation
-- Embedded Google Maps location
-- Responsive mobile-first design
+- Full branded website for Marina BeautyRoom
+- Services: Brow, Lip, Brazilian, Leg, Underarm, Men's, Pregnancy, Full Body
+- Appointment booking form with full front-end validation
+- 24-hour time slots in booking form
+- Embedded Google Maps
+- Contact strip with click-to-call button
+- Mobile-first responsive design
 
-## Tech Stack
-- HTML5, CSS3, Vanilla JavaScript
-
-## Preview
-Open `index.html` in any browser.
+## Tech
+HTML5 · CSS3 · Vanilla JavaScript
