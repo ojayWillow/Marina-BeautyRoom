@@ -7,11 +7,30 @@ window.addEventListener('scroll', () => {
 // ===== HAMBURGER MENU =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+const menuOverlay = document.getElementById('menu-overlay');
+
+function openMenu() {
+  navLinks.classList.add('open');
+  hamburger.classList.add('open');
+  menuOverlay.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  menuOverlay.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  navLinks.classList.contains('open') ? closeMenu() : openMenu();
 });
+menuOverlay.addEventListener('click', closeMenu);
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', closeMenu);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMenu();
 });
 
 // ===== MIN DATE =====

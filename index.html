@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marina BeautyRoom — Vaksācija Rīgā | Zolītūde / Imanta</title>
-  <meta name="description" content="Profesionāla vaksācija un mat u novecēšana Rīgā. Zolītūde, Imanta, Marina.BeautyRoom. Atvērts 24 stundas. Ruses iela 6-1. Zvaniet: +371 29 818 158." />
+  <meta name="description" content="Profesionāla vaksācija un matu novecēšana Rīgā. Zolītūde, Imanta, Marina.BeautyRoom. Atvērts 24 stundas. Ruses iela 6-1. Zvaniet: +371 29 818 158." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+
+  <!-- MENU OVERLAY -->
+  <div class="menu-overlay" id="menu-overlay"></div>
 
   <!-- NAVIGĀCIJA -->
   <nav class="navbar" id="navbar">
@@ -23,10 +26,15 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
+        <div class="nav-close-row">
+          <span class="nav-logo-mobile">🌸 Marina BeautyRoom</span>
+          <button class="nav-close" id="nav-close" aria-label="Aizvērt izvēlni">&times;</button>
+        </div>
         <li><a href="#services">Pakalpojumi</a></li>
         <li><a href="#about">Par mums</a></li>
         <li><a href="#testimonials">Atsauksmes</a></li>
         <li><a href="#booking" class="btn-nav">Pierakstīties</a></li>
+        <li class="nav-contact-item"><a href="tel:+37129818158" class="nav-call-btn">📞 +371 29 818 158</a></li>
       </ul>
     </div>
   </nav>
@@ -44,13 +52,13 @@
         <a href="tel:+37129818158" class="btn btn-outline">📞 Zvanīt tagad</a>
       </div>
       <div class="hero-badges">
-        <span class="hero-badge">⭐ 5.0 vērtējums (28 atsauksmes)</span>
-        <span class="hero-badge">🕐 Atvērts 24 stundas</span>
-        <span class="hero-badge">👩‍💼 Sī biznesa īpašniece ir sieviete</span>
-        <span class="hero-badge">📍 Rīga, Zolītūde / Imanta</span>
+        <span class="hero-badge">⭐ 5.0 (28 atsauksmes)</span>
+        <span class="hero-badge">🕐 24 stundas</span>
+        <span class="hero-badge">👩‍💼 Sievietes biz nests</span>
+        <span class="hero-badge">📍 Zolītūde / Imanta</span>
       </div>
     </div>
-    <div class="hero-scroll"><span>Ritiniet uz leju</span> ↓</div>
+    <div class="hero-scroll">↓</div>
   </section>
 
   <!-- PAKALPOJUMI -->
@@ -65,14 +73,14 @@
         <div class="service-card">
           <div class="service-icon">✨</div>
           <h3>Uzacu vaksācija</h3>
-          <p>Izveido un definē uzacis — tīrs, elegants izskats, kas perfekti ierāmē Jūsu seju.</p>
+          <p>Izveido un definē uzacis — tīrs, elegants izskats.</p>
           <span class="price">no €10</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
         <div class="service-card">
           <div class="service-icon">💋</div>
-          <h3>Lūpu un zŋda vaksācija</h3>
-          <p>Ātra un precīza vaksācija augšlūpai un zodam — gludi rezultāti, minimāls kairinājums.</p>
+          <h3>Lūpu un zoda vaksācija</h3>
+          <p>Ātra un precīza vaksācija augšlūpai un zodam.</p>
           <span class="price">no €8</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
@@ -80,42 +88,42 @@
           <div class="badge">Vispopulārākais</div>
           <div class="service-icon">🌿</div>
           <h3>Brazīlijas vaksācija</h3>
-          <p>Pilna Brazīlijas procedūra ar mīksto un cieto vasku — ilgstoša, maiga gludība.</p>
+          <p>Pilna Brazīlijas procedūra — ilgstoša, maiga gludība.</p>
           <span class="price">no €40</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
         <div class="service-card">
           <div class="service-icon">🦵</div>
           <h3>Kāju vaksācija</h3>
-          <p>Pus- vai pilnas kājas vaksācija ideāli gludai ādai pirms svētkiem vai īpašiem notikumiem.</p>
+          <p>Pus- vai pilnas kājas vaksācija ideāli gludai ādai.</p>
           <span class="price">no €25</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
         <div class="service-card">
           <div class="service-icon">💪</div>
           <h3>Paduses vaksācija</h3>
-          <p>Ātra un efektīva paduses vaksācija ar nomierinošu losjonu pēc procedūras.</p>
+          <p>Ātra un efektīva paduses vaksācija.</p>
           <span class="price">no €12</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
         <div class="service-card">
           <div class="service-icon">👨</div>
           <h3>Vīriešu vaksācija</h3>
-          <p>Profesionāla matu noņemšana vīriešiem — mugura, krūtis, rokas, uzacis un citi apgabali.</p>
+          <p>Mugura, krūtis, rokas, uzacis un citi apgabali.</p>
           <span class="price">no €20</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
         <div class="service-card">
           <div class="service-icon">🤰</div>
           <h3>Vaksācija grūtniecēm</h3>
-          <p>Maigi pielāgotas vaksācijas procedūras, drošas un ērtas topošajām māmiņām.</p>
+          <p>Maigi pielāgotas procedūras topošajām māmiņām.</p>
           <span class="price">no €20</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
         <div class="service-card">
           <div class="service-icon">🌸</div>
           <h3>Pilnas ēnas vaksācija</h3>
-          <p>Pilnīga matu noņemšana no galvas līdz kājām — absolūtas gludības pieredze.</p>
+          <p>Pilnīga matu noņemšana no galvas līdz kājām.</p>
           <span class="price">no €100</span>
           <a href="#booking" class="btn btn-sm">Pierakstīties</a>
         </div>
@@ -128,16 +136,14 @@
     <div class="container about-grid">
       <div class="about-visual">
         <div class="about-badge">❤️ Sī biznesa īpašniece ir sieviete</div>
-        <div class="about-img-placeholder">
-          <span>🌺</span>
-        </div>
+        <div class="about-img-placeholder"><span>🌺</span></div>
         <div class="about-rating-pill">⭐ 5.0 — 28 Google atsauksmes</div>
       </div>
       <div class="about-text">
         <p class="section-eyebrow">Par mums</p>
         <h2 class="section-title">Vaksācija Zolītūdē &amp; Imantā</h2>
-        <p>Marina.BeautyRoom ir Rīgas uzticamais, sieviešu vadītais vaksācijas salōns, kas apkalpo Zolītūdes un Imantas rajo nus no mūsu adres es <strong>Ruses iela 6-1</strong>. Ar perfektu 5.0 zvaigžņu vērtējumu un 28 Google atsauksmēm mūsu klienti uzticas mums profesionālām un rūpīgām procedūrām.</p>
-        <p>Mēs strādājam <strong>24 stundas diennaktī, 7 dienas nedēļā</strong> — jo gluda āda negaida. Vai tas ir ātrs uzacu sakopšanas apmeklējums vai pilna Brazīlijas procedūra — mūsu sertificētie speciālisti vienmēr ir gatavi Jums palidzēt.</p>
+        <p>Marina.BeautyRoom ir Rīgas uzticamais, sieviešu vadītais vaksācijas salōns, kas apkalpo Zolītūdes un Imantas rajonus no <strong>Ruses iela 6-1</strong>. Ar 5.0 ⭐ vērtējumu un 28 Google atsauksmēm, mūsu klienti uzticas mums profesionālām procedūrām.</p>
+        <p>Mēs strādājam <strong>24 stundas diennaktī, 7 dienas nedēļā</strong> — jo gluda āda negaida.</p>
         <ul class="about-perks">
           <li>✅ 5.0 ⭐ Google vērtējums (28 atsauksmes)</li>
           <li>✅ Atvērts 24 stundas, 7 dienas nedēļā</li>
@@ -161,35 +167,26 @@
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="review">"Labākā vaksācijas pieredze Rīgā! Marina ir tik profesionāla un maiga, un salons ir nevainojami tīrs. Es nekur citur vairs neiešu!"</p>
+          <p class="review">"Labākā vaksācijas pieredze Rīgā! Marina ir tik profesionāla un maiga, un salōns ir nevainojami tīrs. Es nekur citur vairs neiešu!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">L</div>
-            <div>
-              <strong>Laura S.</strong>
-              <span>Google atsauksme</span>
-            </div>
+            <div><strong>Laura S.</strong><span>Google atsauksme</span></div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="review">"Mīlu, ka viņi strādā 24 stundas — es rezervēju vēla vakara apmeklējumu un biju sajūsmā par kvalitāti. Nesāpīgi, ātri un super profesionāli. Ļoti iesaku!"</p>
+          <p class="review">"Mīlu, ka viņi strādā 24 stundas — rezervēju vēla vakara apmeklējumu un biju sajūsmā par kvalitāti. Nesāpīgi, ātri un super profesionāli!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">A</div>
-            <div>
-              <strong>Anastasija K.</strong>
-              <span>Google atsauksme</span>
-            </div>
+            <div><strong>Anastasija K.</strong><span>Google atsauksme</span></div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="review">"Esmu pastāvīga klienti jau vairāk nekā gadu. Rezultāti vienmēr ilgst ilgāk nekā jebkur citur. Lieliskas cenas, lieliska atmosfēra, lielisks kolektīvs."</p>
+          <p class="review">"Esmu pastāvīga klienti jau vairāk nekā gadu. Rezultāti vienmēr ilgst ilgāk nekā jebkur citur. Lieliskas cenas, atmosfēra un kolektīvs."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">K</div>
-            <div>
-              <strong>Kristīne M.</strong>
-              <span>Google atsauksme</span>
-            </div>
+            <div><strong>Kristīne M.</strong><span>Google atsauksme</span></div>
           </div>
         </div>
       </div>
@@ -254,32 +251,20 @@
             <label for="time">Vēlamā laiks <span class="req">*</span></label>
             <select id="time" name="time" required>
               <option value="">— Izvēlieties laiku —</option>
-              <option value="00:00">00:00 (pusnakts)</option>
-              <option value="06:00">06:00</option>
-              <option value="07:00">07:00</option>
-              <option value="08:00">08:00</option>
-              <option value="09:00">09:00</option>
-              <option value="10:00">10:00</option>
-              <option value="11:00">11:00</option>
-              <option value="12:00">12:00</option>
-              <option value="13:00">13:00</option>
-              <option value="14:00">14:00</option>
-              <option value="15:00">15:00</option>
-              <option value="16:00">16:00</option>
-              <option value="17:00">17:00</option>
-              <option value="18:00">18:00</option>
-              <option value="19:00">19:00</option>
-              <option value="20:00">20:00</option>
-              <option value="21:00">21:00</option>
-              <option value="22:00">22:00</option>
-              <option value="23:00">23:00</option>
+              <option>00:00</option><option>06:00</option><option>07:00</option>
+              <option>08:00</option><option>09:00</option><option>10:00</option>
+              <option>11:00</option><option>12:00</option><option>13:00</option>
+              <option>14:00</option><option>15:00</option><option>16:00</option>
+              <option>17:00</option><option>18:00</option><option>19:00</option>
+              <option>20:00</option><option>21:00</option><option>22:00</option>
+              <option>23:00</option>
             </select>
             <span class="error-msg" id="timeError"></span>
           </div>
         </div>
         <div class="form-group full">
           <label for="notes">Piezīmes</label>
-          <textarea id="notes" name="notes" rows="4" placeholder="Alerģijas, grūtniecības informācija, pirmreizēja apmeklējuma piezīmes vai īpaši lūgumi..."></textarea>
+          <textarea id="notes" name="notes" rows="3" placeholder="Alerģijas, grūtniecības informācija vai īpaši lūgumi..."></textarea>
         </div>
         <div class="form-group full form-consent">
           <label class="checkbox-label">
@@ -299,14 +284,13 @@
       <div class="map-info">
         <h3>📍 Kā mūs atrast</h3>
         <p><strong>Ruses iela 6-1</strong><br />Zemgales priekšpilseta<br />Rīga, LV-1029, Latvija</p>
-        <p style="margin-top:12px">📞 <a href="tel:+37129818158">+371 29 818 158</a></p>
+        <p style="margin-top:10px">📞 <a href="tel:+37129818158">+371 29 818 158</a></p>
         <p>🕐 Atvērts 24 stundas, 7 dienas nedēļā</p>
         <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="btn btn-primary">Atvērt Google Maps</a>
       </div>
       <div class="map-embed">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.5!2d24.0145!3d56.9213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfe0a0a0a0a1%3A0x0!2sRuses+iela+6-1%2C+R%C4%ABga+LV-1029!5e0!3m2!1slv!2slv!4v1"
-          width="100%" height="320" style="border:0; border-radius:16px;" allowfullscreen loading="lazy"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.5!2d24.0145!3d56.9213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfe0a0a0a0a1%3A0x0!2sRuses+iela+6-1%2C+R%C4%ABga+LV-1029!5e0!3m2!1slv!2slv!4v1"
+          width="100%" height="300" style="border:0;border-radius:16px;" allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -344,7 +328,10 @@
     </div>
   </footer>
 
-  <!-- PAZIŅOJUMS -->
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:+37129818158" class="fab-call" aria-label="Zvanīt">📞</a>
+
+  <!-- PAZIņOJUMS -->
   <div class="toast" id="toast">
     <span class="toast-icon">✅</span>
     <span id="toast-msg">Paldies! Mēs apstiprināsim Jūsu pierakstu drīzumā.</span>
