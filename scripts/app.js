@@ -1,109 +1,75 @@
-// ===== NAVBAR SCROLL =====
+// NAVBAR
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// ===== HAMBURGER MENU =====
+// MENU
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-const menuOverlay = document.getElementById('menu-overlay');
+const navLinks  = document.getElementById('nav-links');
+const overlay   = document.getElementById('menu-overlay');
+const closeBtn  = document.getElementById('nav-close');
 
-function openMenu() {
-  navLinks.classList.add('open');
-  hamburger.classList.add('open');
-  menuOverlay.classList.add('show');
-  document.body.style.overflow = 'hidden';
-}
-function closeMenu() {
-  navLinks.classList.remove('open');
-  hamburger.classList.remove('open');
-  menuOverlay.classList.remove('show');
-  document.body.style.overflow = '';
-}
+function openMenu()  { navLinks.classList.add('open'); hamburger.classList.add('open'); overlay.classList.add('show'); document.body.style.overflow = 'hidden'; }
+function closeMenu() { navLinks.classList.remove('open'); hamburger.classList.remove('open'); overlay.classList.remove('show'); document.body.style.overflow = ''; }
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.contains('open') ? closeMenu() : openMenu();
-});
-menuOverlay.addEventListener('click', closeMenu);
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeMenu);
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeMenu();
-});
+hamburger.addEventListener('click', () => navLinks.classList.contains('open') ? closeMenu() : openMenu());
+overlay.addEventListener('click', closeMenu);
+closeBtn.addEventListener('click', closeMenu);
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => e.key === 'Escape' && closeMenu());
 
-// Close button inside menu
-const navCloseBtn = document.getElementById('nav-close');
-if (navCloseBtn) navCloseBtn.addEventListener('click', closeMenu);
+// DATE MIN
+const di = document.getElementById('date');
+if (di) di.setAttribute('min', new Date().toISOString().split('T')[0]);
 
-// ===== MIN DATE =====
-const dateInput = document.getElementById('date');
-if (dateInput) {
-  dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
-}
+// VALIDATION
+const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const isPhone = v => /^[+]?[\d\s\-()]{7,}$/.test(v);
 
-// ===== VALIDATION =====
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+function setErr(id, msg) {
+  const el = document.getElementById(id);
+  const em = document.getElementById(id + 'Error');
+  if (el) el.style.borderColor = msg ? '#c0392b' : '';
+  if (em) em.textContent = msg || '';
 }
-function validatePhone(phone) {
-  return /^[+]?[\d\s\-()]{7,}$/.test(phone);
+function clearErrs() {
+  ['fullName','email','phone','service','date','time','consent'].forEach(f => setErr(f, ''));
 }
-function setError(fieldId, msg) {
-  const el = document.getElementById(fieldId);
-  const errEl = document.getElementById(fieldId + 'Error');
-  if (el) el.classList.toggle('error', !!msg);
-  if (errEl) errEl.textContent = msg || '';
-}
-function clearErrors() {
-  ['fullName','email','phone','service','date','time','consent'].forEach(f => setError(f, ''));
-}
-function validateForm() {
-  clearErrors();
-  let valid = true;
-  const fullName = document.getElementById('fullName').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const service = document.getElementById('service').value;
-  const date = document.getElementById('date').value;
-  const time = document.getElementById('time').value;
-  const consent = document.getElementById('consent').checked;
-  if (!fullName || fullName.length < 2) { setError('fullName', 'Lūdzu, ievadiet savu vārdu un uzvārdu.'); valid = false; }
-  if (!email || !validateEmail(email)) { setError('email', 'Lūdzu, ievadiet derīgu e-pasta adresi.'); valid = false; }
-  if (!phone || !validatePhone(phone)) { setError('phone', 'Lūdzu, ievadiet derīgu tālruņa numuru.'); valid = false; }
-  if (!service) { setError('service', 'Lūdzu, izvēlieties procedūru.'); valid = false; }
-  if (!date) { setError('date', 'Lūdzu, izvēlieties datumu.'); valid = false; }
-  if (!time) { setError('time', 'Lūdzu, izvēlieties laiku.'); valid = false; }
-  if (!consent) { setError('consent', 'Jums jāpiekrīt privātuma politikai.'); valid = false; }
-  return valid;
+function validate() {
+  clearErrs();
+  let ok = true;
+  const v = id => document.getElementById(id)?.value?.trim();
+  if (!v('fullName') || v('fullName').length < 2) { setErr('fullName', 'Ievadiet vārdu un uzvārdu.'); ok = false; }
+  if (!isEmail(v('email'))) { setErr('email', 'Derīga e-pasta adrese.'); ok = false; }
+  if (!isPhone(v('phone'))) { setErr('phone', 'Derīgs tālruņa numurs.'); ok = false; }
+  if (!v('service')) { setErr('service', 'Izvēlieties procedūru.'); ok = false; }
+  if (!v('date')) { setErr('date', 'Izvēlieties datumu.'); ok = false; }
+  if (!document.getElementById('time')?.value) { setErr('time', 'Izvēlieties laiku.'); ok = false; }
+  if (!document.getElementById('consent')?.checked) { setErr('consent', 'Piekrītiet politikai.'); ok = false; }
+  return ok;
 }
 
-// ===== FORM SUBMIT =====
-const bookingForm = document.getElementById('bookingForm');
-const formSuccess = document.getElementById('formSuccess');
-
-bookingForm.addEventListener('submit', function(e) {
+// FORM
+const form    = document.getElementById('bookingForm');
+const success = document.getElementById('formSuccess');
+form.addEventListener('submit', function(e) {
   e.preventDefault();
-  if (!validateForm()) return;
+  if (!validate()) return;
   const btn = this.querySelector('.btn-submit');
   btn.textContent = 'Sūta...';
   btn.disabled = true;
   setTimeout(() => {
-    bookingForm.style.display = 'none';
-    formSuccess.style.display = 'block';
+    form.style.display = 'none';
+    success.style.display = 'block';
   }, 800);
 });
 
-// ===== ACTIVE NAV =====
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-links a');
+// ACTIVE NAV
+const secs = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
-  });
-  navItems.forEach(a => {
-    a.style.fontWeight = a.getAttribute('href') === '#' + current ? '700' : '500';
-  });
-});
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navAs.forEach(a => { a.style.fontWeight = a.getAttribute('href') === '#'+cur ? '700' : '500'; });
+}, { passive: true });

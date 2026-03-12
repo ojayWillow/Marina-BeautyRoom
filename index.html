@@ -3,343 +3,450 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marina BeautyRoom — Vaksācija Rīgā | Zolītūde / Imanta</title>
-  <meta name="description" content="Profesionāla vaksācija un matu novecēšana Rīgā. Zolītūde, Imanta, Marina.BeautyRoom. Atvērts 24 stundas. Ruses iela 6-1. Zvaniet: +371 29 818 158." />
+  <title>Marina BeautyRoom — Vaksācija Rīgā</title>
+  <meta name="description" content="Profesionāla vaksācija Rīgā. Zolītūde, Imanta. Ruses iela 6-1. +371 29 818 158. Atvērts 24/7." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
 
-  <!-- MENU OVERLAY -->
   <div class="menu-overlay" id="menu-overlay"></div>
 
-  <!-- NAVIGĀCIJA -->
+  <!-- NAV -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
+    <div class="nav-inner">
       <a href="#home" class="logo">
-        <span class="logo-icon">🌸</span>
-        <span class="logo-text">Marina <em>BeautyRoom</em></span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <span>Marina <em>BeautyRoom</em></span>
       </a>
-      <button class="hamburger" id="hamburger" aria-label="Atvērt izvēlni">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
         <div class="nav-close-row">
-          <span class="nav-logo-mobile">🌸 Marina BeautyRoom</span>
-          <button class="nav-close" id="nav-close" aria-label="Aizvērt izvēlni">&times;</button>
+          <span class="nav-logo-mobile">Marina <em>BeautyRoom</em></span>
+          <button class="nav-close" id="nav-close">&times;</button>
         </div>
         <li><a href="#services">Pakalpojumi</a></li>
         <li><a href="#about">Par mums</a></li>
         <li><a href="#testimonials">Atsauksmes</a></li>
-        <li><a href="#booking" class="btn-nav">Pierakstīties</a></li>
-        <li class="nav-contact-item"><a href="tel:+37129818158" class="nav-call-btn">📞 +371 29 818 158</a></li>
+        <li><a href="#booking">Pierakstīties</a></li>
+        <li class="nav-contact-item"><a href="tel:+37129818158" class="nav-phone">+371 29 818 158</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Profesionāla vaksācija Rīgā</p>
-      <h1 class="hero-title">Marina<br /><em>BeautyRoom</em></h1>
-      <p class="hero-tagline">Maiga āda. Katru reizi.</p>
-      <p class="hero-sub">Vaksācija Zolītūdē &amp; Imantā — sieviešu vadīts salōns ar 5.0 ⭐ vērtējumu. Atvērts 24 stundas, 7 dienas nedēļā.</p>
-      <div class="hero-cta">
-        <a href="#booking" class="btn btn-primary">📅 Pierakstīties</a>
-        <a href="tel:+37129818158" class="btn btn-outline">📞 Zvanīt tagad</a>
-      </div>
-      <div class="hero-badges">
-        <span class="hero-badge">⭐ 5.0 (28 atsauksmes)</span>
-        <span class="hero-badge">🕐 24 stundas</span>
-        <span class="hero-badge">👩‍💼 Sievietes bizness</span>
-        <span class="hero-badge">📍 Zolītūde / Imanta</span>
+    <div class="hero-bg">
+      <div class="hero-shape s1"></div>
+      <div class="hero-shape s2"></div>
+      <div class="hero-shape s3"></div>
+      <div class="hero-lines">
+        <span></span><span></span><span></span><span></span><span></span>
       </div>
     </div>
-    <div class="hero-scroll">↓</div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="label">Rīga &mdash; Zolītūde / Imanta</p>
+        <h1>
+          <span class="h1-thin">Marina</span>
+          <span class="h1-serif"><em>Beauty</em><br/>Room</span>
+        </h1>
+        <p class="hero-desc">Maiga āda. Katru reizi. Profesionāla vaksācija sievietēm un vīriešiem &mdash; atvērts 24 stundas, 7 dienas nedēļā.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn-dark">Pieļēmo vizitē</a>
+          <a href="tel:+37129818158" class="btn-ghost">+371 29 818 158</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-img">
+            <div class="card-art">
+              <div class="petal p1"></div>
+              <div class="petal p2"></div>
+              <div class="petal p3"></div>
+              <div class="petal p4"></div>
+              <div class="center-dot"></div>
+            </div>
+          </div>
+          <div class="hero-card-body">
+            <div class="stat">
+              <span class="stat-num">5.0</span>
+              <span class="stat-label">Google Rating</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">28+</span>
+              <span class="stat-label">Atsauksmes</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">24/7</span>
+              <span class="stat-label">Atvērts</span>
+            </div>
+          </div>
+        </div>
+        <p class="hero-aside">Ruses iela 6-1, Rīga</p>
+      </div>
+    </div>
+    <a href="#services" class="scroll-hint">
+      <span>Lejup</span>
+      <svg width="16" height="24" viewBox="0 0 16 24"><line x1="8" y1="0" x2="8" y2="20" stroke="currentColor" stroke-width="1"/><polyline points="2,14 8,20 14,14" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    </a>
   </section>
 
-  <!-- PAKALPOJUMI -->
-  <section class="services section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Ko mēs piedāvājam</p>
-        <h2 class="section-title">Mūsu pakalpojumi</h2>
-        <p class="section-sub">Visas procedūras veic sertificēti speciālisti, izmantojot augstas kvalitātes, ādai draudzīgu vasku.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">✨</div>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-label">01 &mdash; Pakalpojumi</span>
+        <h2>Mūsu<br/><em>procedūras</em></h2>
+      </header>
+      <div class="svc-grid">
+
+        <article class="svc-item">
+          <div class="svc-num">01</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <ellipse cx="20" cy="16" rx="8" ry="5"/>
+            <path d="M12 16 Q10 22 20 24 Q30 22 28 16"/>
+          </svg>
           <h3>Uzacu vaksācija</h3>
-          <p>Izveido un definē uzacis — tīrs, elegants izskats.</p>
-          <span class="price">no €10</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">💋</div>
-          <h3>Lūpu un zoda vaksācija</h3>
-          <p>Ātra un precīza vaksācija augšlūpai un zodam.</p>
-          <span class="price">no €8</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card featured">
-          <div class="badge">Vispopulārākais</div>
-          <div class="service-icon">🌿</div>
+          <p>Precizitāte un forma &mdash; tev pietiek</p>
+          <span class="svc-price">no &euro;10</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item">
+          <div class="svc-num">02</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M8 20 Q14 14 20 20 Q26 26 32 20"/>
+            <path d="M8 20 Q14 26 20 20 Q26 14 32 20"/>
+          </svg>
+          <h3>Lūpu vaksācija</h3>
+          <p>Ātra, precizitāte bez sāpēm</p>
+          <span class="svc-price">no &euro;8</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item featured">
+          <div class="svc-badge">Populārākais</div>
+          <div class="svc-num">03</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M20 5 L20 35"/>
+            <path d="M10 12 Q20 8 30 12"/>
+            <path d="M8 20 Q20 15 32 20"/>
+            <path d="M10 28 Q20 24 30 28"/>
+          </svg>
           <h3>Brazīlijas vaksācija</h3>
-          <p>Pilna Brazīlijas procedūra — ilgstoša, maiga gludība.</p>
-          <span class="price">no €40</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🦵</div>
+          <p>Ilgstošs efekts, maigi un profesionāli</p>
+          <span class="svc-price">no &euro;40</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item">
+          <div class="svc-num">04</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M14 6 L14 34 Q14 36 16 36 Q18 36 18 34 L18 6"/>
+            <path d="M22 10 L22 34 Q22 36 24 36 Q26 36 26 34 L26 10"/>
+          </svg>
           <h3>Kāju vaksācija</h3>
-          <p>Pus- vai pilnas kājas vaksācija ideāli gludai ādai.</p>
-          <span class="price">no €25</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">💪</div>
+          <p>Pus- vai pilna kāja &mdash; jūsu izvēle</p>
+          <span class="svc-price">no &euro;25</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item">
+          <div class="svc-num">05</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 20 Q12 10 20 8 Q28 10 28 20"/>
+            <path d="M15 20 Q15 28 20 30 Q25 28 25 20"/>
+          </svg>
           <h3>Paduses vaksācija</h3>
-          <p>Ātra un efektīva paduses vaksācija.</p>
-          <span class="price">no €12</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">👨</div>
+          <p>Jauka un ātra procedūra</p>
+          <span class="svc-price">no &euro;12</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item">
+          <div class="svc-num">06</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="20" cy="12" r="5"/>
+            <path d="M13 28 Q13 20 20 20 Q27 20 27 28 L27 35 L13 35 Z"/>
+          </svg>
           <h3>Vīriešu vaksācija</h3>
-          <p>Mugura, krūtis, rokas, uzacis un citi apgabali.</p>
-          <span class="price">no €20</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🤰</div>
+          <p>Mugura, krūtis, uzacis un vairāk</p>
+          <span class="svc-price">no &euro;20</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item">
+          <div class="svc-num">07</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <ellipse cx="20" cy="22" rx="9" ry="12"/>
+            <path d="M14 14 Q16 8 20 6 Q24 8 26 14"/>
+          </svg>
           <h3>Vaksācija grūtniecēm</h3>
-          <p>Maigi pielāgotas procedūras topošajām māmiņām.</p>
-          <span class="price">no €20</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🌸</div>
+          <p>Maigi, droši un pielāgoti</p>
+          <span class="svc-price">no &euro;20</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
+        <article class="svc-item">
+          <div class="svc-num">08</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="8" y="8" width="24" height="24" rx="12"/>
+            <path d="M14 20 L18 24 L26 16"/>
+          </svg>
           <h3>Pilnas ēnas vaksācija</h3>
-          <p>Pilnīga matu noņemšana no galvas līdz kājām.</p>
-          <span class="price">no €100</span>
-          <a href="#booking" class="btn btn-sm">Pierakstīties</a>
-        </div>
+          <p>No galvas līdz kājām &mdash; komplekts</p>
+          <span class="svc-price">no &euro;100</span>
+          <a href="#booking" class="svc-link">Rezervēt &rarr;</a>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- PAR MUMS -->
-  <section class="about section" id="about">
-    <div class="container about-grid">
-      <div class="about-visual">
-        <div class="about-badge">❤️ Sī biznesa īpašniece ir sieviete</div>
-        <div class="about-img-placeholder"><span>🌺</span></div>
-        <div class="about-rating-pill">⭐ 5.0 — 28 Google atsauksmes</div>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-visual">
+      <div class="about-art">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="about-quote">
+          <p>&ldquo;Maiga āda.<br/>Katru reizi.&rdquo;</p>
+        </div>
       </div>
-      <div class="about-text">
-        <p class="section-eyebrow">Par mums</p>
-        <h2 class="section-title">Vaksācija Zolītūdē &amp; Imantā</h2>
-        <p>Marina.BeautyRoom ir Rīgas uzticamais, sieviešu vadītais vaksācijas salōns, kas apkalpo Zolītūdes un Imantas rajonus no <strong>Ruses iela 6-1</strong>. Ar 5.0 ⭐ vērtējumu un 28 Google atsauksmēm, mūsu klienti uzticas mums profesionālām procedūrām.</p>
-        <p>Mēs strādājam <strong>24 stundas diennaktī, 7 dienas nedēļā</strong> — jo gluda āda negaida.</p>
-        <ul class="about-perks">
-          <li>✅ 5.0 ⭐ Google vērtējums (28 atsauksmes)</li>
-          <li>✅ Atvērts 24 stundas, 7 dienas nedēļā</li>
-          <li>✅ Biznesa īpašniece ir sieviete</li>
-          <li>✅ Sertificēti un pieredzējuši speciālisti</li>
-          <li>✅ Apkalpo Zolītūdi un Imantu, Rīgā</li>
-          <li>✅ Hipoalerģisks, ādai draudzīgs vasks</li>
-        </ul>
-        <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="btn btn-primary">📍 Skatīt Google Maps</a>
+      <div class="about-tag">Sievietes vadīts bizness &mdash; Rīgā</div>
+    </div>
+    <div class="about-content">
+      <span class="sec-label">02 &mdash; Par mums</span>
+      <h2>Vaksācija<br/><em>Zolītūdē &amp;<br/>Imantā</em></h2>
+      <p>Marina.BeautyRoom ir Rīgas uzticamākais vaksācijas salōns, ko vada sieviete ar aizrautību un precizitāti. Mēs apkalpojam Zolītūdes un Imantas rajonus no <strong>Ruses iela 6-1</strong>.</p>
+      <p>Mēs ticējam, ka katrai klientei ir tiesības uz lielisku pieredzi &mdash; tāpēc strādājam <strong>24 stundas diennaktī</strong>, jo jūsu grafiks ir svarīgs.</p>
+      <ul class="about-list">
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3,10 8,15 17,5"/></svg>
+          5.0 Google vērtējums &mdash; 28 atsauksmes
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3,10 8,15 17,5"/></svg>
+          Atvērts 24/7 &mdash; katru dienu
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3,10 8,15 17,5"/></svg>
+          Sertificēti speciālisti
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3,10 8,15 17,5"/></svg>
+          Hipoalerģisks vasks
+        </li>
+      </ul>
+      <a href="#booking" class="btn-dark">Pieļēmo vizitē</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi" id="testimonials">
+    <div class="wrap">
+      <header class="sec-head light">
+        <span class="sec-label">03 &mdash; Atsauksmes</span>
+        <h2>Ko saka<br/><em>klienti</em></h2>
+      </header>
+      <div class="testi-grid">
+        <blockquote class="testi-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+          </div>
+          <p>&ldquo;Labākā vaksācijas pieredze Rīgā. Marina ir tik profesionāla un maiga &mdash; salōns ir nevainojami tīrs. Es nekur citur neiešu.&rdquo;</p>
+          <footer><strong>Laura S.</strong> &mdash; Google</footer>
+        </blockquote>
+        <blockquote class="testi-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+          </div>
+          <p>&ldquo;Rezervēju vēla vakara laiku un biju apbur ta ar kvalitāti. Nesāpīgi, ātri un absolūti profesionāli.&rdquo;</p>
+          <footer><strong>Anastasija K.</strong> &mdash; Google</footer>
+        </blockquote>
+        <blockquote class="testi-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><polygon points="10,2 12.4,7.5 18.5,8 14,12.2 15.4,18.5 10,15.2 4.6,18.5 6,12.2 1.5,8 7.6,7.5"/></svg>
+          </div>
+          <p>&ldquo;Pastāvīga klienti jau vairāk nekā gadu. Rezultāti ilgst ilgāk nekā jebkur citur. Cenas, atmosfēra, kolektīvs &mdash; viss ir izcils.&rdquo;</p>
+          <footer><strong>Kristīne M.</strong> &mdash; Google</footer>
+        </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- ATSAUKSMES -->
-  <section class="testimonials section" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">5.0 ⭐ Google vērtējums</p>
-        <h2 class="section-title">Ko saka mūsu klienti</h2>
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+    <div class="wrap booking-wrap">
+      <div class="booking-left">
+        <span class="sec-label">04 &mdash; Pieraksts</span>
+        <h2>Rezervējiet<br/><em>savu laiku</em></h2>
+        <p>Aizpildiet formu &mdash; mēs sazināsimies 24 stundu laikā, lai apstiprintūtu vizitē.</p>
+        <div class="booking-info">
+          <div class="binfo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Ruses iela 6-1</strong>
+              <span>Zemgale, Rīga LV-1029</span>
+            </div>
+          </div>
+          <div class="binfo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.36 1.18 2 2 0 012.34 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-.78a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <strong>+371 29 818 158</strong>
+              <span>Atvērts 24 stundas</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="map-link">Skatīt kartē &rarr;</a>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="review">"Labākā vaksācijas pieredze Rīgā! Marina ir tik profesionāla un maiga, un salōns ir nevainojami tīrs. Es nekur citur vairs neiešu!"</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">L</div>
-            <div><strong>Laura S.</strong><span>Google atsauksme</span></div>
-          </div>
+      <div class="booking-right">
+
+        <div class="form-success" id="formSuccess" style="display:none">
+          <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.2" width="60" height="60"><circle cx="30" cy="30" r="28"/><polyline points="18,30 26,38 42,22" stroke-width="2"/></svg>
+          <h3>Paldies!</h3>
+          <p>Pieraksts saņemts. Sazināsimies 24 stundu laikā.</p>
+          <a href="tel:+37129818158" class="btn-dark">Zvanīt uzreiz</a>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="review">"Mīlu, ka viņi strādā 24 stundas — rezervēju vēla vakara apmeklējumu un biju sajūsmā par kvalitāti. Nesāpīgi, ātri un super profesionāli!"</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">A</div>
-            <div><strong>Anastasija K.</strong><span>Google atsauksme</span></div>
+
+        <form id="bookingForm" class="bform" novalidate>
+          <div class="frow">
+            <div class="fg">
+              <label>Vārds, Uzvārds <span>*</span></label>
+              <input type="text" id="fullName" placeholder="Anna Bērziņa" required />
+              <em id="fullNameError"></em>
+            </div>
+            <div class="fg">
+              <label>Tālrunis <span>*</span></label>
+              <input type="tel" id="phone" placeholder="+371 2900 0000" required />
+              <em id="phoneError"></em>
+            </div>
           </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="review">"Esmu pastāvīga klienti jau vairāk nekā gadu. Rezultāti vienmēr ilgst ilgāk nekā jebkur citur. Lieliskas cenas, atmosfēra un kolektīvs."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">K</div>
-            <div><strong>Kristīne M.</strong><span>Google atsauksme</span></div>
+          <div class="frow">
+            <div class="fg">
+              <label>E-pasts <span>*</span></label>
+              <input type="email" id="email" placeholder="anna@epasts.lv" required />
+              <em id="emailError"></em>
+            </div>
+            <div class="fg">
+              <label>Procedūra <span>*</span></label>
+              <select id="service" required>
+                <option value="">Izvēlieties&hellip;</option>
+                <option value="brow">Uzacu vaksācija &mdash; no &euro;10</option>
+                <option value="lip">Lūpu vaksācija &mdash; no &euro;8</option>
+                <option value="brazilian">Brazīlijas vaksācija &mdash; no &euro;40</option>
+                <option value="leg">Kāju vaksācija &mdash; no &euro;25</option>
+                <option value="underarm">Paduses vaksācija &mdash; no &euro;12</option>
+                <option value="mens">Vīriešu vaksācija &mdash; no &euro;20</option>
+                <option value="pregnancy">Grūtniecība &mdash; no &euro;20</option>
+                <option value="fullbody">Pilna ēna &mdash; no &euro;100</option>
+              </select>
+              <em id="serviceError"></em>
+            </div>
           </div>
-        </div>
+          <div class="frow">
+            <div class="fg">
+              <label>Datums <span>*</span></label>
+              <input type="date" id="date" required />
+              <em id="dateError"></em>
+            </div>
+            <div class="fg">
+              <label>Laiks <span>*</span></label>
+              <select id="time" required>
+                <option value="">Izvēlieties&hellip;</option>
+                <option>00:00</option><option>06:00</option><option>07:00</option><option>08:00</option>
+                <option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option>
+                <option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option>
+                <option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option>
+                <option>21:00</option><option>22:00</option><option>23:00</option>
+              </select>
+              <em id="timeError"></em>
+            </div>
+          </div>
+          <div class="fg full">
+            <label>Piezīmes</label>
+            <textarea id="notes" rows="3" placeholder="Alerģijas, īpaši lūgumi&hellip;"></textarea>
+          </div>
+          <div class="fg full consent">
+            <label class="check-label">
+              <input type="checkbox" id="consent" required />
+              <span>Piekrītu <a href="#">Privātuma politikai</a> un sazinatīai par pierakstu <span class="req">*</span></span>
+            </label>
+            <em id="consentError"></em>
+          </div>
+          <button type="submit" class="btn-submit">Pieļēmo vizitē</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- PIERAKSTS -->
-  <section class="booking section" id="booking">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Sāciet tagad</p>
-        <h2 class="section-title">Pierakstieties uz apmeklējumu</h2>
-        <p class="section-sub">Aizpildiet formu un mēs apstiprināsim Jūsu pierakstu. Varat arī zvanīt jebkurā laikā — strādājam 24/7!</p>
+  <!-- MAP -->
+  <section class="mapsec">
+    <div class="map-grid">
+      <div class="map-side">
+        <span class="sec-label">05 &mdash; Atrašanās vieta</span>
+        <h3>Ruses iela 6&ndash;1<br/><em>Rīga, LV-1029</em></h3>
+        <p>Zemgales priekšpilsēta &mdash; viegli sasniedzama ar sabiedrisko transportu.</p>
+        <a href="tel:+37129818158" class="btn-dark">+371 29 818 158</a>
+        <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="btn-ghost-dark">Atvērt Google Maps &rarr;</a>
       </div>
-      <div class="booking-contact-strip">
-        <a href="tel:+37129818158" class="contact-pill">📞 +371 29 818 158</a>
-        <span class="contact-pill open-pill">🕐 Atvērts 24 stundas</span>
-        <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="contact-pill">📍 Ruses iela 6-1, Rīga</a>
-      </div>
-
-      <!-- SUCCESS MESSAGE -->
-      <div class="form-success" id="formSuccess" style="display:none;">
-        <div class="success-icon">🌸</div>
-        <h3>Paldies! Pieraksts saņemts.</h3>
-        <p>Mēs sazināsimies ar Jums 24 stundu laikā, lai apstiprintūtu apmeklējumu.</p>
-        <p>Vai vēlaties zvanīt uzreiz?</p>
-        <a href="tel:+37129818158" class="btn btn-primary">📞 +371 29 818 158</a>
-      </div>
-
-      <form class="booking-form" id="bookingForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fullName">Vārds, Uzvārds <span class="req">*</span></label>
-            <input type="text" id="fullName" name="fullName" placeholder="piem., Anna Bērziņa" required />
-            <span class="error-msg" id="fullNameError"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">E-pasta adrese <span class="req">*</span></label>
-            <input type="email" id="email" name="email" placeholder="piem., anna@epasts.lv" required />
-            <span class="error-msg" id="emailError"></span>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Tālruņa numurs <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="piem., +371 2900 0000" required />
-            <span class="error-msg" id="phoneError"></span>
-          </div>
-          <div class="form-group">
-            <label for="service">Vēlamā procedūra <span class="req">*</span></label>
-            <select id="service" name="service" required>
-              <option value="">— Izvēlieties procedūru —</option>
-              <option value="brow">Uzacu vaksācija (no €10)</option>
-              <option value="lip">Lūpu un zoda vaksācija (no €8)</option>
-              <option value="brazilian">Brazīlijas vaksācija (no €40)</option>
-              <option value="leg">Kāju vaksācija (no €25)</option>
-              <option value="underarm">Paduses vaksācija (no €12)</option>
-              <option value="mens">Vīriešu vaksācija (no €20)</option>
-              <option value="pregnancy">Vaksācija grūtniecēm (no €20)</option>
-              <option value="fullbody">Pilnas ēnas vaksācija (no €100)</option>
-            </select>
-            <span class="error-msg" id="serviceError"></span>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="date">Vēlamā datums <span class="req">*</span></label>
-            <input type="date" id="date" name="date" required />
-            <span class="error-msg" id="dateError"></span>
-          </div>
-          <div class="form-group">
-            <label for="time">Vēlamā laiks <span class="req">*</span></label>
-            <select id="time" name="time" required>
-              <option value="">— Izvēlieties laiku —</option>
-              <option>00:00</option><option>06:00</option><option>07:00</option>
-              <option>08:00</option><option>09:00</option><option>10:00</option>
-              <option>11:00</option><option>12:00</option><option>13:00</option>
-              <option>14:00</option><option>15:00</option><option>16:00</option>
-              <option>17:00</option><option>18:00</option><option>19:00</option>
-              <option>20:00</option><option>21:00</option><option>22:00</option>
-              <option>23:00</option>
-            </select>
-            <span class="error-msg" id="timeError"></span>
-          </div>
-        </div>
-        <div class="form-group full">
-          <label for="notes">Piezīmes</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Alerģijas, grūtniecības informācija vai īpaši lūgumi..."></textarea>
-        </div>
-        <div class="form-group full form-consent">
-          <label class="checkbox-label">
-            <input type="checkbox" id="consent" required />
-            <span>Piekrītu <a href="#">Privātuma politikai</a> un piekritu, ka ar mani sazināsies saistībā ar manu pierakstu. <span class="req">*</span></span>
-          </label>
-          <span class="error-msg" id="consentError"></span>
-        </div>
-        <button type="submit" class="btn btn-primary btn-submit">🌸 Pierakstīties uz apmeklējumu</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ATRAŠANĀS VIETA -->
-  <section class="map-section">
-    <div class="container map-container">
-      <div class="map-info">
-        <h3>📍 Kā mūs atrast</h3>
-        <p><strong>Ruses iela 6-1</strong><br />Zemgales priekšpilseta<br />Rīga, LV-1029, Latvija</p>
-        <p style="margin-top:10px">📞 <a href="tel:+37129818158">+371 29 818 158</a></p>
-        <p>🕐 Atvērts 24 stundas, 7 dienas nedēļā</p>
-        <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="btn btn-primary">Atvērt Google Maps</a>
-      </div>
-      <div class="map-embed">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.5!2d24.0145!3d56.9213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfe0a0a0a0a1%3A0x0!2sRuses+iela+6-1%2C+R%C4%ABga+LV-1029!5e0!3m2!1slv!2slv!4v1"
-          width="100%" height="300" style="border:0;border-radius:16px;" allowfullscreen loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.5!2d24.0145!3d56.9213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfe0a0a0a0a1%3A0x0!2sRuses+iela+6-1%2C+R%C4%ABga+LV-1029!5e0!3m2!1slv!2slv!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- KĀJENE -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-grid">
+    <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-text">🌸 Marina <em>BeautyRoom</em></span>
-        <p>Vaksācija Zolītūde / Imanta</p>
-        <p class="footer-address">📍 Ruses iela 6-1, Rīga LV-1029</p>
-        <p class="footer-address">🕐 Atvērts 24 stundas katru dienu</p>
+        <p class="foot-logo">Marina <em>BeautyRoom</em></p>
+        <p>Vaksācija Zolītūde / Imanta<br/>Ruses iela 6-1, Rīga LV-1029</p>
+        <p>Atvērts 24 stundas, katru dienu</p>
       </div>
       <div class="footer-links">
-        <h4>Ātrās saites</h4>
-        <ul>
-          <li><a href="#services">Pakalpojumi</a></li>
-          <li><a href="#about">Par mums</a></li>
-          <li><a href="#testimonials">Atsauksmes</a></li>
-          <li><a href="#booking">Pierakstīties</a></li>
-        </ul>
+        <p class="foot-head">Ātrās saites</p>
+        <a href="#services">Pakalpojumi</a>
+        <a href="#about">Par mums</a>
+        <a href="#testimonials">Atsauksmes</a>
+        <a href="#booking">Pierakstīties</a>
       </div>
       <div class="footer-contact">
-        <h4>Sazināties</h4>
-        <p>📞 <a href="tel:+37129818158">+371 29 818 158</a></p>
-        <p>⭐ 5.0 vērtējums Google (28 atsauksmes)</p>
-        <div class="social-links">
-          <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="social">🗺️ Google Maps</a>
-        </div>
+        <p class="foot-head">Sazināties</p>
+        <a href="tel:+37129818158">+371 29 818 158</a>
+        <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener">Google Maps</a>
+        <p class="foot-rating">&#9733; 5.0 &mdash; 28 atsauksmes</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Marina BeautyRoom — Vaksācija Zolītūde / Imanta. Ruses iela 6-1, Rīga 🌸</p>
+      <p>&copy; 2026 Marina BeautyRoom &mdash; Rīga</p>
     </div>
   </footer>
 
-  <!-- FLOATING CALL BUTTON -->
-  <a href="tel:+37129818158" class="fab-call" aria-label="Zvanīt">📞</a>
+  <!-- FLOATING CTA -->
+  <a href="tel:+37129818158" class="fab" aria-label="Zvanīt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.36 1.18 2 2 0 012.34 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-.78a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  </a>
 
   <script src="scripts/app.js"></script>
 </body>
