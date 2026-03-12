@@ -1,4 +1,4 @@
-// ===== NAVBAR SCROLL EFFECT =====
+// ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
@@ -9,21 +9,18 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-  hamburger.classList.toggle('active');
 });
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    hamburger.classList.remove('active');
-  });
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// ===== SET MIN DATE TO TODAY =====
+// ===== MIN DATE =====
 const dateInput = document.getElementById('date');
-const today = new Date().toISOString().split('T')[0];
-dateInput.setAttribute('min', today);
+if (dateInput) {
+  dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+}
 
-// ===== FORM VALIDATION =====
+// ===== VALIDATION (Latvian messages) =====
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -49,13 +46,13 @@ function validateForm() {
   const date = document.getElementById('date').value;
   const time = document.getElementById('time').value;
   const consent = document.getElementById('consent').checked;
-  if (!fullName || fullName.length < 2) { setError('fullName', 'Please enter your full name.'); valid = false; }
-  if (!email || !validateEmail(email)) { setError('email', 'Please enter a valid email address.'); valid = false; }
-  if (!phone || !validatePhone(phone)) { setError('phone', 'Please enter a valid phone number.'); valid = false; }
-  if (!service) { setError('service', 'Please select a service.'); valid = false; }
-  if (!date) { setError('date', 'Please choose a date.'); valid = false; }
-  if (!time) { setError('time', 'Please choose a time slot.'); valid = false; }
-  if (!consent) { setError('consent', 'You must agree to our privacy policy.'); valid = false; }
+  if (!fullName || fullName.length < 2) { setError('fullName', 'Lūdzu, ievadiet savu vārdu un uzvārdu.'); valid = false; }
+  if (!email || !validateEmail(email)) { setError('email', 'Lūdzu, ievadiet derīgu e-pasta adresi.'); valid = false; }
+  if (!phone || !validatePhone(phone)) { setError('phone', 'Lūdzu, ievadiet derīgu tālruņa numuru.'); valid = false; }
+  if (!service) { setError('service', 'Lūdzu, izvēlieties procedūru.'); valid = false; }
+  if (!date) { setError('date', 'Lūdzu, izvēlieties datumu.'); valid = false; }
+  if (!time) { setError('time', 'Lūdzu, izvēlieties laiku.'); valid = false; }
+  if (!consent) { setError('consent', 'Jums jāpiekrīt privātuma politikai.'); valid = false; }
   return valid;
 }
 
@@ -64,7 +61,7 @@ function showToast(msg) {
   const toast = document.getElementById('toast');
   document.getElementById('toast-msg').textContent = msg;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4500);
+  setTimeout(() => toast.classList.remove('show'), 5000);
 }
 
 // ===== FORM SUBMIT =====
@@ -72,17 +69,17 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
   if (!validateForm()) return;
   const btn = this.querySelector('.btn-submit');
-  btn.textContent = 'Sending...';
+  btn.textContent = 'Sūta...';
   btn.disabled = true;
   setTimeout(() => {
-    showToast('🌸 Thank you! We\'ll confirm your booking within 24 hours.');
+    showToast('🌸 Paldies! Mēs apstiprināsim Jūsu pierakstu 24 stundu laikā.');
     this.reset();
-    btn.textContent = '🌸 Book My Appointment';
+    btn.textContent = '🌸 Pierakstīties uz apmeklējumu';
     btn.disabled = false;
   }, 1000);
 });
 
-// ===== SMOOTH ACTIVE NAV HIGHLIGHT =====
+// ===== ACTIVE NAV =====
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
