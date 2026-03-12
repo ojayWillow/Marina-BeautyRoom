@@ -54,7 +54,7 @@
       <div class="hero-badges">
         <span class="hero-badge">⭐ 5.0 (28 atsauksmes)</span>
         <span class="hero-badge">🕐 24 stundas</span>
-        <span class="hero-badge">👩‍💼 Sievietes biz nests</span>
+        <span class="hero-badge">👩‍💼 Sievietes bizness</span>
         <span class="hero-badge">📍 Zolītūde / Imanta</span>
       </div>
     </div>
@@ -199,13 +199,23 @@
       <div class="section-header">
         <p class="section-eyebrow">Sāciet tagad</p>
         <h2 class="section-title">Pierakstieties uz apmeklējumu</h2>
-        <p class="section-sub">Aizpildiet formu zemāk un mēs apstiprināsim Jūsu pierakstu. Varat arī zvanīt jebkurā laikā — strādājam 24/7!</p>
+        <p class="section-sub">Aizpildiet formu un mēs apstiprināsim Jūsu pierakstu. Varat arī zvanīt jebkurā laikā — strādājam 24/7!</p>
       </div>
       <div class="booking-contact-strip">
         <a href="tel:+37129818158" class="contact-pill">📞 +371 29 818 158</a>
         <span class="contact-pill open-pill">🕐 Atvērts 24 stundas</span>
         <a href="https://maps.app.goo.gl/Nc1TU5ugGRhyBFVj7" target="_blank" rel="noopener" class="contact-pill">📍 Ruses iela 6-1, Rīga</a>
       </div>
+
+      <!-- SUCCESS MESSAGE -->
+      <div class="form-success" id="formSuccess" style="display:none;">
+        <div class="success-icon">🌸</div>
+        <h3>Paldies! Pieraksts saņemts.</h3>
+        <p>Mēs sazināsimies ar Jums 24 stundu laikā, lai apstiprintūtu apmeklējumu.</p>
+        <p>Vai vēlaties zvanīt uzreiz?</p>
+        <a href="tel:+37129818158" class="btn btn-primary">📞 +371 29 818 158</a>
+      </div>
+
       <form class="booking-form" id="bookingForm" novalidate>
         <div class="form-row">
           <div class="form-group">
@@ -330,12 +340,6 @@
 
   <!-- FLOATING CALL BUTTON -->
   <a href="tel:+37129818158" class="fab-call" aria-label="Zvanīt">📞</a>
-
-  <!-- PAZIņOJUMS -->
-  <div class="toast" id="toast">
-    <span class="toast-icon">✅</span>
-    <span id="toast-msg">Paldies! Mēs apstiprināsim Jūsu pierakstu drīzumā.</span>
-  </div>
 
   <script src="scripts/app.js"></script>
 </body>

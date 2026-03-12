@@ -33,13 +33,17 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
 
+// Close button inside menu
+const navCloseBtn = document.getElementById('nav-close');
+if (navCloseBtn) navCloseBtn.addEventListener('click', closeMenu);
+
 // ===== MIN DATE =====
 const dateInput = document.getElementById('date');
 if (dateInput) {
   dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 }
 
-// ===== VALIDATION (Latvian messages) =====
+// ===== VALIDATION =====
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -75,27 +79,20 @@ function validateForm() {
   return valid;
 }
 
-// ===== TOAST =====
-function showToast(msg) {
-  const toast = document.getElementById('toast');
-  document.getElementById('toast-msg').textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 5000);
-}
-
 // ===== FORM SUBMIT =====
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
+const bookingForm = document.getElementById('bookingForm');
+const formSuccess = document.getElementById('formSuccess');
+
+bookingForm.addEventListener('submit', function(e) {
   e.preventDefault();
   if (!validateForm()) return;
   const btn = this.querySelector('.btn-submit');
   btn.textContent = 'Sūta...';
   btn.disabled = true;
   setTimeout(() => {
-    showToast('🌸 Paldies! Mēs apstiprināsim Jūsu pierakstu 24 stundu laikā.');
-    this.reset();
-    btn.textContent = '🌸 Pierakstīties uz apmeklējumu';
-    btn.disabled = false;
-  }, 1000);
+    bookingForm.style.display = 'none';
+    formSuccess.style.display = 'block';
+  }, 800);
 });
 
 // ===== ACTIVE NAV =====
